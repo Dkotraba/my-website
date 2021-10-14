@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--
+	
+	
+		Game Corner Website
+		Author: Andrew Kotraba
+		Date:10/11/21
+		
+		Filename: Membership.html
+		Supporting files: header.jpg, main.css
+	-->
+	
+	<meta charset="UTF-8" />
+	<title>Membership</title>
+	<link href="assets/styles/main.css" rel="stylesheet" type="text/css" />
+	<link href="assets/styles/fstyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	
+	<body>
+		<header>
+			<img src="assets/images/header.jpg" alt="Drew's Game Corner" />
+		</header>
+		
+		<nav class="horizontal">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="Prices.html">Prices</a></li>
+				<li><a href="Awards.html">Awards</a></li>
+				<li><a href="events.html">Upcoming Events</a></li>
+				<li><a href="Membership.html">Membership</a></li>
+			</ul>
+		</nav>
+		
+		<section id="main">
+			<h1>Newsletter Signup</h1>
+		<form name="NewsletterForm" id="NewsletterForm"
+               action="http://www.Drewsgamecorner.com/cgi-bin/interest"
+               method="post">
+
+            <fieldset id="contactFields">
+               <legend>Contact Information</legend>
+
+               <label for="fName">First Name</label>
+               <input type="text" id="fName" name="fName" required="required" />
+
+               <label for="lName">Last Name</label>
+               <input type="text" id="lName" name="lName" required="required" />
+
+               <label for="address">Address</label>
+               <input type="text" id="address" name="address" required="required" />
+
+               <label for="city">City</label>
+               <input type="text" id="city" name="city" required="required" />
+
+               <label for="city">State</label>
+               <input type="text" id="state" name="state" required="required" value="" />
+
+               <label for="zip">Postal Code</label>
+               <input type="text" id="zip" name="zip" placeholder="nnnnn (-nnnn)"
+                      pattern="^\d{5}(\-\d{4})?$"/>
+
+               <label for="phone">Phone</label>
+               <input type="tel" id="phone" name="phone" placeholder="(nnn) nnn-nnnn"
+                      required="required"
+                      pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+
+               <label for="email">Email</label>
+               <input type="email" id="email" name="email" />
+
+            </fieldset>
+
+            <fieldset id="otherFields">
+               <legend>Membership Information</legend>
+
+               <label for="pcontact">
+                  Membership Type
+               </label>
+               <select id="ctype" name="ctype">
+                  <option value="Standard">Standard Membership</option>
+                  <option value="Plus">Membership+</option>
+               </select>
+
+               <label for="ctype" class="blockEntry">Length of Membership</label>
+               <select id="ctype" name="type">
+                  <option value="1month">1 Month</option>
+                  <option value="3month">3 Months</option>
+				  <option value="6month">6 Months</option>
+				  <option value="12month">12 Months</option>
+               </select>
+
+               <label for="Reason">Reason for Membership (select all that apply)</label>
+               <select id="interest" name="interest" size="5" multiple="multiple">
+                  <option value="Tournaments">Tournaments</option>
+                  <option value="Tabletop">Tabletop Games</option>
+                  <option value="console">Console Games</option>
+                  <option value="pc">PC Games</option>
+                  <option value="Vr">VR Lab</option>
+               </select>
+
+               <label for="years">Years of Game Experience</label>
+               <input id="years" name="years" type="number" value="0" min="0" max="12" />
+
+            </fieldset>
+
+            <input type="checkbox" id="call" name="call" />
+            <label for="call">Please send me a monthly newsletter.</label>
+
+            <input type="submit" value="Submit Information" />
+            <input type="reset" value="Cancel" />
+
+         </form>
+
+      
+      </section>
+
+		
+		<footer>
+			<address>
+				Drew's Game Corner&#183;
+				1600 Pennsylvania Avenue &#183;
+				Washington, DC 20500 &#183;
+				(202) 456 - 1111 &#183;
+				info@DGameCorner.com
+			</address>
+		</footer>
+	</body>
+	<script src="assets/javascripts/formsubmit.js"> </script>
+</html>
